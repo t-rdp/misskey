@@ -81,7 +81,7 @@ export default class extends Endpoint<typeof meta, typeof paramDef> {
 			params.append('text', note.text);
 			params.append('target_lang', targetLang);
 
-			const endpoint = instance.deeplIsPro ? 'https://api.deepl.com/v2/translate' : 'https://api-free.deepl.com/v2/translate';
+			const endpoint = instance.deeplIsPro ? 'http://192.168.1.31:9300/translate' : 'https://api-free.deepl.com/v2/translate'; // https://api.deepl.com/v2/translate
 
 			const res = await this.httpRequestService.send(endpoint, {
 				method: 'POST',
