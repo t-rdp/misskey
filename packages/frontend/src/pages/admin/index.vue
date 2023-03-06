@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, onUnmounted, provide, watch } from 'vue';
+import { onActivated, onMounted, onUnmounted, provide, watch } from 'vue';
 import { i18n } from '@/i18n';
 import MkSuperMenu from '@/components/MkSuperMenu.vue';
 import MkInfo from '@/components/MkInfo.vue';
