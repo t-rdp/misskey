@@ -29,7 +29,7 @@
 				</div>
 				<div v-if="poweredBy" class="powered-by">
 					<b><MkA to="/">{{ host }}</MkA></b>
-					<small>Powered by <a href="https://github.com/misskey-dev/misskey" target="_blank">Misskey</a></small>
+					<small>由 <a href="https://github.com/t-rdp/misskey" target="_blank">Misskey</a> 强力驱动</small>
 				</div>
 			</template>
 		</div>
