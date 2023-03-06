@@ -204,6 +204,13 @@ onMounted(() => {
 	}
 });
 
+onActivated(() => {
+	narrow = el.offsetWidth < NARROW_THRESHOLD;
+	if (currentPage?.route.name == null && !narrow) {
+		router.push('/admin/overview');
+	}
+});
+
 onUnmounted(() => {
 	ro.disconnect();
 });
