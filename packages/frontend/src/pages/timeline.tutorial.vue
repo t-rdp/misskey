@@ -13,10 +13,9 @@
 		</div>
 	</div>
 	<div v-if="tutorial === 0" :class="$style.body">
-		<div>入站考核</div>
-		<div>首先，欢迎您成为天空岛的一员！我们不欢迎用户发布的言论，因此我们使用自动考核的方式审核用户。</div>
+		<div>首先，欢迎您成为天空岛的一员！我们不欢迎恶意用户和长期不活跃用户，因此我们使用自动考核的方式审核用户。</div>
 		<div>完成考核后您将获得公开发帖和网盘权限。</div>
-		<a href="/platform/newbie">前往入站考核</a>
+		<a href="/platform/newbie" class="_link">前往入站考核</a>
 	</div>
 	<div v-else-if="tutorial === 1" :class="$style.body">
 		<div>{{ i18n.ts._tutorial.step1_1 }}</div>

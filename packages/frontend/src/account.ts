@@ -231,6 +231,11 @@ export async function openAccountMenu(opts: {
 			icon: 'ti ti-users',
 			text: i18n.ts.manageAccounts,
 			to: '/settings/accounts',
+		}, {
+			type: 'link',
+			icon: 'ti ti-users',
+			text: "天空岛用户中心",
+			to: '/platform/home',
 		}]], ev.currentTarget ?? ev.target, {
 			align: 'left',
 		});
