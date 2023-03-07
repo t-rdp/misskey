@@ -13,26 +13,32 @@
 		</div>
 	</div>
 	<div v-if="tutorial === 0" :class="$style.body">
+		<div>入站考核</div>
+		<div>首先，欢迎您成为天空岛的一员！我们不欢迎用户发布的言论，因此我们使用自动考核的方式审核用户。</div>
+		<div>完成考核后您将获得公开发帖和网盘权限。</div>
+		<a href="/platform/newbie">前往入站考核</a>
+	</div>
+	<div v-else-if="tutorial === 1" :class="$style.body">
 		<div>{{ i18n.ts._tutorial.step1_1 }}</div>
 		<div>{{ i18n.ts._tutorial.step1_2 }}</div>
 		<div>{{ i18n.ts._tutorial.step1_3 }}</div>
 	</div>
-	<div v-else-if="tutorial === 1" :class="$style.body">
+	<div v-else-if="tutorial === 2" :class="$style.body">
 		<div>{{ i18n.ts._tutorial.step2_1 }}</div>
 		<div>{{ i18n.ts._tutorial.step2_2 }}</div>
 		<MkA class="_link" to="/settings/profile">{{ i18n.ts.editProfile }}</MkA>
 	</div>
-	<div v-else-if="tutorial === 2" :class="$style.body">
+	<div v-else-if="tutorial === 3" :class="$style.body">
 		<div>{{ i18n.ts._tutorial.step3_1 }}</div>
 		<div>{{ i18n.ts._tutorial.step3_2 }}</div>
 		<div>{{ i18n.ts._tutorial.step3_3 }}</div>
 		<small :class="$style.small">{{ i18n.ts._tutorial.step3_4 }}</small>
 	</div>
-	<div v-else-if="tutorial === 3" :class="$style.body">
+	<div v-else-if="tutorial === 4" :class="$style.body">
 		<div>{{ i18n.ts._tutorial.step4_1 }}</div>
 		<div>{{ i18n.ts._tutorial.step4_2 }}</div>
 	</div>
-	<div v-else-if="tutorial === 4" :class="$style.body">
+	<div v-else-if="tutorial === 5" :class="$style.body">
 		<div>{{ i18n.ts._tutorial.step5_1 }}</div>
 		<I18n :src="i18n.ts._tutorial.step5_2" tag="div">
 			<template #featured>
@@ -45,12 +51,12 @@
 		<div>{{ i18n.ts._tutorial.step5_3 }}</div>
 		<small :class="$style.small">{{ i18n.ts._tutorial.step5_4 }}</small>
 	</div>
-	<div v-else-if="tutorial === 5" :class="$style.body">
+	<div v-else-if="tutorial === 6" :class="$style.body">
 		<div>{{ i18n.ts._tutorial.step6_1 }}</div>
 		<div>{{ i18n.ts._tutorial.step6_2 }}</div>
 		<div>{{ i18n.ts._tutorial.step6_3 }}</div>
 	</div>
-	<div v-else-if="tutorial === 6" :class="$style.body">
+	<div v-else-if="tutorial === 7" :class="$style.body">
 		<div>{{ i18n.ts._tutorial.step7_1 }}</div>
 		<I18n :src="i18n.ts._tutorial.step7_2" tag="div">
 			<template #help>
@@ -59,7 +65,7 @@
 		</I18n>
 		<div>{{ i18n.ts._tutorial.step7_3 }}</div>
 	</div>
-	<div v-else-if="tutorial === 7" :class="$style.body">
+	<div v-else-if="tutorial === 8" :class="$style.body">
 		<div>{{ i18n.ts._tutorial.step8_1 }}</div>
 		<div>{{ i18n.ts._tutorial.step8_2 }}</div>
 		<small :class="$style.small">{{ i18n.ts._tutorial.step8_3 }}</small>
@@ -84,7 +90,7 @@ import MkPushNotificationAllowButton from '@/components/MkPushNotificationAllowB
 import { defaultStore } from '@/store';
 import { i18n } from '@/i18n';
 
-const tutorialsNumber = 8;
+const tutorialsNumber = 9;
 
 const tutorial = computed({
 	get() { return defaultStore.reactiveState.tutorial.value || 0; },
