@@ -201,6 +201,10 @@ export async function openAccountMenu(opts: {
 		};
 	}
 
+	function openTakumiPlatform() {
+		window.location.href = "/platform/home";
+	}
+
 	const accountItemPromises = storedAccounts.map(a => new Promise(res => {
 		accountsPromise.then(accounts => {
 			const account = accounts.find(x => x.id === a.id);
@@ -232,10 +236,10 @@ export async function openAccountMenu(opts: {
 			text: i18n.ts.manageAccounts,
 			to: '/settings/accounts',
 		}, {
-			type: 'link',
+			type: 'button',
 			icon: 'ti ti-users',
 			text: "天空岛用户中心",
-			to: '/platform/home',
+			action: () => { openTakumiPlatform(); },
 		}]], ev.currentTarget ?? ev.target, {
 			align: 'left',
 		});
