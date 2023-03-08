@@ -13,8 +13,8 @@
 		</div>
 	</div>
 	<div v-if="tutorial === 0" :class="$style.body">
-		<div>首先，欢迎您成为天空岛的一员！我们不欢迎恶意用户和长期不活跃用户，因此我们使用自动考核的方式审核用户。</div>
-		<div>完成考核后您将获得公开发帖和网盘权限。</div>
+		<div>首先，欢迎您成为天空岛的一员！</div>
+		<div>我们建议您完成入站考核，这样可以获得更低的速率限制和更高的网盘空间。</div>
 		<a href="/platform/newbie" class="_link">前往入站考核</a>
 	</div>
 	<div v-else-if="tutorial === 1" :class="$style.body">
