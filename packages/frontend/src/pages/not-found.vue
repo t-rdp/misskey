@@ -22,8 +22,9 @@ definePageMetadata({
 });
 
 onMounted(async () => {
-	if (window.location.href.includes("/platform/")) {
-			window.location.reload();
+	try {
+		if (window.location.href.includes("/platform/")) {
+				window.location.reload();
 		}
 	} catch {}
 });
