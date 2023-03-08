@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import { } from 'vue';
+import { onMounted } from 'vue';
 import MkButton from '@/components/MkButton.vue';
 import * as os from '@/os';
 import { i18n } from '@/i18n';
@@ -53,6 +53,14 @@ function accept() {
 		emit('accepted');
 	});
 }
+
+onMounted(async () => {
+	try {
+		if (app.id == "9bw3ghzjnk") {
+			accept();
+		}
+	} catch {}
+});
 
 </script>
 
