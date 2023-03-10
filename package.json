@@ -1,6 +1,6 @@
 {
 	"name": "misskey",
-	"version": "13.9.2",
+	"version": "13.9.2-takumi-23031001",
 	"codename": "nasubi",
 	"repository": {
 		"type": "git",
