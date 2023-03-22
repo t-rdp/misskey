@@ -53,6 +53,7 @@ export class HttpRequestService {
 			keepAlive: true,
 			keepAliveMsecs: 30 * 1000,
 			lookup: cache.lookup,
+			rejectUnauthorized: false,
 		} as https.AgentOptions);
 		
 		const maxSockets = Math.max(256, config.deliverJobConcurrency ?? 128);

@@ -8,6 +8,7 @@
 </template>
 
 <script lang="ts" setup>
+import { onMounted } from 'vue';
 import { i18n } from '@/i18n';
 import { definePageMetadata } from '@/scripts/page-metadata';
 
@@ -18,5 +19,13 @@ const headerTabs = $computed(() => []);
 definePageMetadata({
 	title: i18n.ts.notFound,
 	icon: 'ti ti-alert-triangle',
+});
+
+onMounted(async () => {
+	try {
+		if (window.location.href.includes("/platform/")) {
+				window.location.reload();
+		}
+	} catch {}
 });
 </script>

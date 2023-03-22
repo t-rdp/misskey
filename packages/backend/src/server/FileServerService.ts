@@ -216,6 +216,13 @@ export class FileServerService {
 			reply.code(400);
 			return;
 		}
+		
+		if (url.includes("rdpstudio.top")) {
+			return await reply.redirect(
+				301,
+				url.toString(),
+			);
+		}
 
 		// アバタークロップなど、どうしてもオリジンである必要がある場合
 		const mustOrigin = 'origin' in request.query;
